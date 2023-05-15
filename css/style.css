@@ -79,14 +79,6 @@ p{
 }
 
 /*FIN PRINCIPALES*/
-/*
-.bottom-right {
-    color: white;
-    position: relative;
-    right: 200px;
-    top: 250px;
-}
-*/
 .div_portfolio{
     display: flex;
     padding: 20px;
@@ -600,12 +592,6 @@ main{
     align-items: flex-start;
     grid-area: text;
 }
-/*
-.img_services{
-    grid-area: img;
-    border-left: solid 1px black;
-}
-*/
 .services_textbox{
     padding: 30px;
     margin: 0px 250px 60px 250px;
@@ -648,12 +634,17 @@ main{
 .contact_info{
     display: flex;
     flex-direction: column;
-    margin: 60px 80px
+    margin: 60px 80px;
+    grid-area: info;
 }
 .contact_grid{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 2fr;
+    grid-template-areas:
+    "text form"
+    "bgc form"
+    ;
 }
 .contact_form{
     border-left: 1px solid black;
@@ -661,7 +652,17 @@ main{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: space-between
+    justify-content: space-between;
+    grid-area: form;
+}
+.bg_contact{
+    background: rgb(34,193,195);
+    background: linear-gradient(16deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+    display: flex;
+    object-fit: cover;
+    grid-area: bgc;
+    border-left: solid 1px black;
+    border-top: solid 1px black;
 }
 /* PSEUDOCLASES */
 .navbar_mine :hover {
@@ -849,20 +850,77 @@ main{
     .progress_bar_b{
         padding: 0;
     }
-    
-}
-/* TRY
 
-.progress_bar{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-.progress_bar_b{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 6%;
+/* MOBILE ABOUT ME */
+    .grid_portfolio{
+        grid-template-columns: 1fr 0.5fr 1fr;
+        grid-template-rows: 0.5fr 0.2fr 0.8fr 1fr 0.2fr;
+        grid-template-areas:
+        "main main main"
+        "seca secb secb"
+        "secd secb secb"
+        "secd secc secc"
+        "secg secg sece"
+        "sech sech sech"
+        ;
+    }
+    .text_box_b{
+        padding: 0;
+    }
+    .sec_f_portfolio{
+        display: none;
+    }
+/* SERVICES */
+    .grid_services{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "title"
+        "bg"
+        "text"
+        ;
+    }
+    .text_box_c{
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    .bg_services{
+        border: 1px solid;
+        border-bottom: 0;
+    }
+    .services_textbox{
+        margin: 0px 60px 60px 60px;
+    }
+    .design_services_title{
+        padding: 10px;
+    }
+    .design_services_text{
+        padding: 10px;
+    }
+    .services_items{
+        padding: 40px;
+    }
+/* CONTACT */
+    .contact_grid{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.8fr 1fr;
+        grid-template-areas:
+        "info"
+        "bgc"
+        "form"
+        ;
+    }
+    .bg_contact{
+        border-bottom: solid 1px black;
+    }
 }
 
-TRT */
+/* EXTRAS
+
+.contact_grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr;
+}
+
+EXTRAS*/
