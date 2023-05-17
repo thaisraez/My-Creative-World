@@ -1,19 +1,4 @@
-// colores //
-$black: black;
+$black: #000000;
 
-// gradientes //
-$gr-a:
-    rgb(63,94,251),
-    linear-gradient(171deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
-
-$gr-b:
-    rgb(34,193,195),
-    linear-gradient(16deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
-
-$gr-c:
-    rgb(190,255,79),
-    radial-gradient(circle, rgba(190,255,79,1) 0%, rgba(255,155,254,1) 100%);
-
-// tipografías //
-
-// bordes //
+$half-border: black, 0.5px solid;
+$border: black, 1px, solid;

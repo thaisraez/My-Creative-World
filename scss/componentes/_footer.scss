@@ -1,0 +1,37 @@
+footer{
+    border-top: 0.5px solid black;
+    margin-bottom: 0;
+    padding: 20px;
+}
+.footer_grid{
+    display: grid;
+    grid-template-columns: 3.3fr 2fr 0.5fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: end;
+
+    .footer_display{
+        display: none;
+    }
+
+    .footer_display_complete{
+        display: block;
+    }
+
+    div .display_socialmedia{
+        display: flex;
+
+        li{
+            display: inline-block;
+            padding: 0 20px;
+
+            .socialmedia_icons{
+                width: 40px;
+            }
+        }
+    }
+    .arrowup{
+        width: 60px;
+        grid-area: arrow;
+    }
+}

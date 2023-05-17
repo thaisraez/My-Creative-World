@@ -1,4 +1,9 @@
 @import './base/vars';
 @import './base/base';
+@import './base/maps';
+@import './base/extend';
 
 @import './componentes/header';
+@import './componentes/footer';
+
+@import './pages/home.scss'
