@@ -60,7 +60,7 @@ p {
 
 #move_bar {
   font-weight: 1.3rem;
-  border: black, 0.5px solid;
+  border: solid black 0.5px;
   padding: 10px 0 5px 0;
 }
 #move_bar marquee ul {
@@ -81,7 +81,7 @@ p {
 }
 
 .btn_mine {
-  border: black, 1px, solid;
+  border: solid black 1px;
   background-color: rgb(0, 0, 0);
   color: white;
   padding: 20px 40px;
@@ -89,7 +89,7 @@ p {
   text-align: center;
 }
 .btn_mine:hover {
-  border: black, 1px, solid;
+  border: solid black 1px;
   color: #000000;
 }
 
