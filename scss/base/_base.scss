@@ -12,6 +12,12 @@ h1{
     font-size: 4.5rem;
     text-align: center;
     padding: 0rem 20rem 0rem 20rem;
+    @media (max-width: 576px){
+            font-size: 2rem;
+            padding: 2rem 5rem;
+            border: 1px solid;
+            margin: 0;
+    }
 }
 h2{
     font-family: 'Inter', sans-serif;
@@ -69,6 +75,9 @@ p{
         li {
             display: inline;
             padding: 8px;
+            .star{
+                width: 0.8rem;
+            }
         }
     }
 }
@@ -78,20 +87,84 @@ p{
 .button_div{
     margin-top: 3rem;
     margin-bottom: 3rem;
+
+    .btn_mine{
+        border: $complete-border;
+        background-color: $black;
+        @extend %font-caps;
+        color: $white;
+        padding: 20px 40px;
+        text-decoration: none;
+        text-align: center;
+    
+        &:hover{
+            border: $complete-border;
+            @extend %gr-a;
+            color: $black;
+        }
+    }
 }
 
-.btn_mine{
-    border: $complete-border;
+.button_div_c{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+
+    .btn_mine_c{
+        border: $complete-border;
+        background-color: $black;
+        @extend %font-caps;
+        color: $white;
+        padding: 20px 40px;
+        text-decoration: none;
+        text-align: center;
+    
+        &:hover{
+            border: $complete-border;
+            @extend %gr-c;
+            color: $black;
+        }
+    }
+}
+
+.button_div_b{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 3rem 0;
+    border: $half-border;
+
+    .button_b{
+        border: $complete-border;
+        background-color: $black;
+        @extend %font-caps;
+        color: $white;
+        padding: 20px 40px;
+        text-decoration: none;
+
+        &:hover{
+            border: $complete-border;
+            @extend %gr-b;
+            color: $black;
+        }
+    }
+}
+
+.design_services_button{
+    border: 1px solid black;
     background-color: rgb(0, 0, 0);
-    @extend %font-caps;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
     color: white;
     padding: 20px 40px;
+    margin: 40px;
     text-decoration: none;
-    text-align: center;
-
     &:hover{
         border: $complete-border;
-        @extend %gr-c;
+        @extend %gr-b;
         color: $black;
+    }
+    @media (max-width: 576px){
+        margin: 0;;
     }
 }
