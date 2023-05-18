@@ -6,9 +6,7 @@
 }
 
 h1{
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    text-transform: uppercase;
+    @extend %font-caps;
     font-size: 4.5rem;
     text-align: center;
     padding: 0rem 20rem 0rem 20rem;
@@ -20,22 +18,27 @@ h1{
     }
 }
 h2{
-    font-family: 'Inter', sans-serif;
-    font-weight: 300;
-    text-transform: uppercase;
-    font-size: 2.2rem;
+    @extend %font-caps;
+    font-size: 4rem;
+    @media (max-width: 576px){
+        font-size: 2rem;
+    }
 }
 h3{
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    text-transform: uppercase;
-    font-size: 4rem;
+    @extend %font-caps-b;
+    font-size: 2.2rem;
+    @media (max-width: 576px){
+        font-size: 1.5rem;
+    }
 }
 h4{
     font-family: 'Inter', sans-serif;
     font-weight: 500;
     text-transform: uppercase;
     font-size: 1.4rem;
+    @media (max-width: 576px){
+        font-size: 1.2rem;
+    }
 }
 h5{
     font-family: 'Inter', sans-serif;
@@ -44,11 +47,17 @@ h5{
     font-size: 2.3rem;
     letter-spacing: 8px;
     grid-area: phrase;
+    @media (max-width: 576px){
+        font-size: 0.8rem;
+    }
 }
 p{
     font-family: 'Inter', sans-serif;
     font-weight: 300;
     font-size: 1.1rem;
+    @media (max-width: 576px){
+        font-size: 0.9rem;
+    }
 }
 
 .hidden{
@@ -180,6 +189,6 @@ p{
     }
 }
 .animacion:hover{
-    animation: miAnimacion 1s;
+    animation: miAnimacion 0.8s;
     animation-delay: none;
 }
