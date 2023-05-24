@@ -1,0 +1,267 @@
+.grid_ab_me{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: 100%;
+    border-top: $complete-border;
+    border-bottom: $half-border;
+    @media (max-width: 576px){
+        display: flex;
+        flex-direction: column;
+    }
+
+    .text_box_a{
+        margin: 40px 40px 40px 80px;
+        @media (max-width: 576px){
+            margin: 20px 45px;
+        }
+
+        .subtitle_a{
+            padding: 25px 0;
+        }
+    }
+    .container_img{
+        display: flex;
+        @media (max-width: 576px){
+            display: flex;
+            border-top: 1px solid black;
+        }
+
+        .img{
+            border-left:$complete-border;
+            object-fit: cover;
+            display: flex;
+        }
+    }
+}
+
+.grid_d{
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas: 
+    "icon text text"
+    "textb edua edub"
+    ;
+    @media (max-width: 576px){
+        grid-template-columns: 0.3fr 0.5fr 0.5fr 0.5fr;
+        grid-template-rows: 0.3fr 0.3fr 0.3fr;
+        grid-template-areas:
+        "icon icon text text"
+        "textb textb edua edua"
+        "edub edub edub edub"
+        ;
+    }
+    .icons_aboutme{
+        grid-area: icon;
+        border: $half-border;
+        padding: 30px;
+        display: flex;
+        justify-content: space-evenly;
+        gap: 8%;
+        @media (max-width: 576px){
+            padding: 10px;
+        }
+        .about_icon{
+            max-width: 2rem;
+            @media (max-width: 576px){
+                max-width: 0.8rem;
+            }
+        }
+    }
+    .about_text_a{
+        grid-area: text;
+        border: $half-border;
+        padding: 30px;
+        display: flex;
+        align-items: center;
+        @media (max-width: 576px){
+            padding: 100 20px;
+            align-items: center;
+            text-align: center;
+        }
+    }
+    .about_text_b{
+        grid-area: textb;
+        border: $half-border;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .edu_a{
+        grid-area: edua;
+        border: $half-border;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .edu_b{
+        grid-area: edub;
+        border: $half-border;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+.grid_e{
+    display: grid;
+    grid-template-columns: 1.5fr 1.8fr 1.8fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    "bge jobc jobd exp"
+    ;
+    @media (max-width: 576px){
+        grid-template-columns: 1.5fr 1.8fr 1.8fr 1fr;
+        grid-template-rows: 0.3fr 0.3fr 0.3fr;
+        grid-template-areas:
+        "bge bge exp exp"
+        "jobc jobc jobc jobc"
+        "jobd jobd jobd jobd"
+        ;
+    }
+    .bg_e{
+        @extend %gr-b;
+        display: flex;
+        object-fit: cover;
+        border: $half-border;
+        grid-area: bge;
+    }
+    .job_c{
+        border: $half-border;
+        padding: 30px;
+        grid-area: jobc;
+    }
+    .job_d{
+        border: $half-border;
+        padding: 30px;
+        grid-area: jobd;
+    }
+    .experience{
+        border: $half-border;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        grid-area: exp;
+    }
+}
+.grid_f{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.3fr 1.3fr;
+    grid-template-rows: 1fr 0.2fr 1fr;
+    grid-template-areas:
+    "list imgd jobb jobc"
+    "list skills skills skills"
+    "question skills skills skills"
+    ;
+    @media (max-width: 576px){
+        display: flex;
+        flex-direction: column;
+    }
+    .list_area{
+        border: $half-border;
+        padding: 30px;
+        grid-area: list;
+        display: flex;
+        @media (max-width: 576px){
+            justify-content: center;
+        }
+        .list{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            gap: 5%;
+            @media (max-width: 576px){
+                flex-direction: row;
+                padding: 0;
+                margin: 0;
+            }
+
+            div .list_item{
+                display: flex;
+                flex-direction: row;
+                gap: 5%;
+            }
+        }
+    }
+    .bg_d{
+        @extend %gr-c;
+        display: flex;
+        object-fit: cover;
+        border: $half-border;
+        @media (max-width: 576px){
+            display: none;
+        }
+    }
+    .job_b{
+        grid-area: jobb;
+        border: $half-border;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .job_c{
+        border: $half-border;
+        padding: 30px;
+        grid-area: jobc;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .question{
+        border: $half-border;
+        padding: 30px;
+        grid-area: question;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        @media (max-width: 576px){
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+    }
+    .skills{
+        grid-area: skills;
+        border: $half-border;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        .progress_bar{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            @media (max-width: 576px){
+                padding: 0;
+            }
+            .progress_item{
+                width: 25%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        .progress_bar_b{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 6%;
+            @media (max-width: 576px){
+                padding: 0;
+            }
+            .progress_item{
+                width: 25%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+.main_nav {
+    align-items: flex-start;
+}
+    
+.navbar-toggler-mine {
+    border: $complete-border;
+    border-radius: 0px;
+    margin: 5%;
+    padding: 20px;
+}
+
+.navbar_mine {
+    border-bottom: $half-border;
+    width: 100%;
+    border-left: $half-border;
+        
+    .nav_item {
+        border: $half-border;
+        display: flex,;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+            background-color: black;
+        }
+
+        .nav_a{
+            @extend %font-caps;
+            font-size: 14px;
+            color: $black;
+
+            &:hover {
+                color: white;
+            }
+        }
+    }
+}
